@@ -3,6 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	images: { unoptimized: true },
 	output: "export",
+	distDir: "docs",
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
