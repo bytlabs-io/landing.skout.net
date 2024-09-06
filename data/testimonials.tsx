@@ -1,42 +1,45 @@
 export default {
-  title: 'Loved by tech people',
-  items: [
-    {
-      name: 'Eelco Wiersma',
-      description: 'Founder Saas UI',
-      avatar:
-        'https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg',
-      children: (
-        <>
-          “With SaaS UI I am able to produce high quality dashboard apps and
-          internal tools without a lot of design skills. The ROI really is
-          amazing.”
-        </>
-      ),
-    },
-    {
-      name: 'Caroline Yahaya',
-      description: 'Fullstack Developer',
-      avatar: '/static/images/avatar2.jpg',
-      children: (
-        <>
-          “Saas UI allows me to build beautiful and functional UI super fast.
-          The components are very well thought out and the Next.js starter kit
-          saved me at least 100 hours of work.”
-        </>
-      ),
-    },
-    {
-      name: 'Alberto Vazquez',
-      description: 'Frontend Engineer',
-      avatar: '/static/images/avatar3.jpg',
-      children: (
-        <>
-          “Saas UI gave us a perfect starting point for our project, having the
-          storybooks already set up with beautifully crafted components and
-          fully mocked pages was a treat.”
-        </>
-      ),
-    },
-  ],
-}
+	title: "Loved by sports people",
+	items: [
+		{
+			name: "Jeff M.",
+			description: "Aspiring Basketball Player",
+			avatar:
+				"https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg",
+			children: (
+				<>
+					“SkoutNet has completely transformed my career. After participating in
+					a few challenges, I got noticed by several scouts, and now I am in
+					talks with a professional team! The platform is easy to use, and the
+					opportunities are endless.”
+				</>
+			),
+		},
+		{
+			name: "Caroline",
+			description: "Coach Ghana U18 Women",
+			avatar: "/static/images/avatar2.jpg",
+			children: (
+				<>
+					“As a scout, I’ve never had a platform that made finding talent this
+					simple. The advanced search tools and analytics dashboard have made my
+					job so much easier. SkoutNet is a game-changer for the scouting
+					industry.”
+				</>
+			),
+		},
+		{
+			name: "Marcus Doodo",
+			description: "Tennis Player @ UCC",
+			avatar: "/static/images/avatar3.jpg",
+			children: (
+				<>
+					“SkoutNet’s challenges are such a fun way to prove your skills. I
+					participated in a few challenges, and now I’ve been approached by
+					scouts who saw my performance. The platform really helps you get
+					noticed.”
+				</>
+			),
+		},
+	],
+};

@@ -99,19 +99,23 @@ export const Highlights: React.FC<SectionProps> = (props) => {
   const { children, ...rest } = props;
 
   return (
-    <Section
-      innerWidth="container.xl"
-      position="relative"
-      overflow="hidden"
-      {...rest}
-    >
-      <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
-        gap={8}
-        position="relative"
-      >
-        {children}
-      </Grid>
-    </Section>
-  );
+		<Section
+			innerWidth="container.xl"
+			position="relative"
+			overflow="hidden"
+			id="about"
+			{...rest}
+		>
+			<Heading as="h1" textAlign="start" marginBottom={10}>
+				About
+			</Heading>
+			<Grid
+				templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
+				gap={8}
+				position="relative"
+			>
+				{children}
+			</Grid>
+		</Section>
+	);
 };

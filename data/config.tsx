@@ -1,93 +1,88 @@
 import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
-import { FiCheck } from 'react-icons/fi'
-import { Logo } from './logo'
+import { FaGithub, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
+
+import { FiCheck } from "react-icons/fi";
+import { Logo } from "./logo";
 
 const siteConfig = {
-  logo: Logo,
-  seo: {
-    title: 'Saas UI',
-    description: 'The React component library for startups',
-  } as NextSeoProps,
-  termsUrl: '#',
-  privacyUrl: '#',
-  header: {
-    links: [
-      {
-        id: 'features',
-        label: 'Features',
-      },
-      {
-        id: 'pricing',
-        label: 'Pricing',
-      },
-      {
-        id: 'faq',
-        label: 'FAQ',
-      },
-      {
-        label: 'Login',
-        href: '/login',
-      },
-      {
-        label: 'Sign Up',
-        href: '/signup',
-        variant: 'primary',
-      },
-    ],
-  },
-  footer: {
-    copyright: (
-      <>
-        Built by{' '}
-        <Link href="https://twitter.com/Pagebakers">Eelco Wiersma</Link>
-      </>
-    ),
-    links: [
-      {
-        href: 'mailto:hello@saas-ui.dev',
-        label: 'Contact',
-      },
-      {
-        href: 'https://twitter.com/saas_js',
-        label: <FaTwitter size="14" />,
-      },
-      {
-        href: 'https://github.com/saas-js/saas-ui',
-        label: <FaGithub size="14" />,
-      },
-    ],
-  },
-  signup: {
-    title: 'Start building with Saas UI',
-    features: [
-      {
-        icon: FiCheck,
-        title: 'Accessible',
-        description: 'All components strictly follow WAI-ARIA standards.',
-      },
-      {
-        icon: FiCheck,
-        title: 'Themable',
-        description:
-          'Fully customize all components to your brand with theme support and style props.',
-      },
-      {
-        icon: FiCheck,
-        title: 'Composable',
-        description:
-          'Compose components to fit your needs and mix them together to create new ones.',
-      },
-      {
-        icon: FiCheck,
-        title: 'Productive',
-        description:
-          'Designed to reduce boilerplate and fully typed, build your product at speed.',
-      },
-    ],
-  },
-}
+	logo: Logo,
+	seo: {
+		title: "SkoutNet",
+		description: "Revolutionizing Talent Discovery in Sports",
+	} as NextSeoProps,
+	termsUrl: "#",
+	privacyUrl: "#",
+	header: {
+		links: [
+			{
+				id: "about",
+				label: "About",
+			},
+			{
+				id: "faq",
+				label: "FAQ",
+			},
+			// {
+			// 	label: "Login",
+			// 	href: "/login",
+			// },
+			{
+				label: "Sign Up",
+				href: "/signup",
+				variant: "primary",
+			},
+		],
+	},
+	footer: {
+		copyright: (
+			<>
+				Built by <Link href="https://twitter.com/bytlabs">Bytlabs © 2024</Link>
+			</>
+		),
+		links: [
+			{
+				href: "mailto:skoutnet-team@bytlabs.tech",
+				label: "Contact",
+			},
+			{
+				href: "https://twitter.com/skoutnet",
+				label: <FaTwitter size="14" />,
+			},
+			{
+				href: "https://instagram.com/skoutnet",
+				label: <FaInstagram size="14" />,
+			},
+			{
+				href: "https://tiktok.com/skoutnet",
+				label: <FaTiktok size="14" />,
+			},
+		],
+	},
+	signup: {
+		title: "Join the Waiting List",
+		features: [
+			{
+				icon: FiCheck,
+				title: "Atheletes",
+				description:
+					"On SkoutNet, athletes can create dynamic, detailed profiles that highlight their skills, achievements, and personality.",
+			},
+			{
+				icon: FiCheck,
+				title: "Scouts",
+				description:
+					"SkoutNet provides scouts with advanced search tools, data analytics, and communication features, making it easier than ever to find and evaluate athletes.",
+			},
+			{
+				icon: FiCheck,
+				title: "Challenges",
+				description:
+					"Participate in challenges, connect with scouts, and take control of your sports career. Our platform is designed to give you the visibility you deserve.",
+			},
+		],
+	},
+};
 
 export default siteConfig

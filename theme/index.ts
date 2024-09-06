@@ -5,6 +5,7 @@ import components from './components'
 import { fontSizes } from './foundations/typography'
 
 import '@fontsource/inter/variable.css'
+import { colors } from "./colors";
 
 const styles = {
   global: (props: any) => ({
@@ -21,14 +22,15 @@ const styles = {
 }
 
 export default extendTheme(
-  {
-    config: {
-      initialColorMode: 'dark',
-      useSystemColorMode: false,
-    },
-    styles,
-    fontSizes,
-    components,
-  },
-  theme
-)
+	{
+		config: {
+			initialColorMode: "system",
+			useSystemColorMode: true,
+		},
+		styles,
+		fontSizes,
+		components,
+		colors,
+	},
+	theme
+);

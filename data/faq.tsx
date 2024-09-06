@@ -1,32 +1,29 @@
 import * as React from 'react'
 
 const faq = {
-  title: 'Frequently asked questions',
-  // description: '',
-  items: [
-    {
-      q: 'How many products can I use Saas UI Pro for?',
-      a: (
-        <>
-          The single license can be used for one commercial application or SaaS
-          product and unlimited internal tools. You can buy as many licenses as
-          you need. <br /> The unlimited license does not have any restrictions.
-        </>
-      ),
-    },
-    {
-      q: 'Can I use Saas UI Pro for client work?',
-      a: "Yes, that's totally up to you, as long as it fits the license you purchase.",
-    },
-    {
-      q: 'Can I use Saas UI Pro for Open Source projects?',
-      a: 'No currently not. A large part of Saas UI is already released under MIT license. We try to give back to the community as much as possible.',
-    },
-    {
-      q: 'Does Saas UI include Figma, Sketch or other design files?',
-      a: 'No, Saas UI does not include any design assets. Maintaining design resources costs a lot of extra effort. We believe small teams can move much faster by designing directly in code, with help of Storybooks.',
-    },
-  ],
-}
+	title: "Frequently asked questions",
+	// description: '',
+	items: [
+		{
+			q: "What is SkoutNet?",
+			a: (
+				<>
+					SkoutNet is an online platform designed to connect sport stakeholders.
+					It allows users to create profiles, participate in challenges, and
+					showcase their skills, while users can search for and evaluate talent
+					through powerful search tools and analytics features.
+				</>
+			),
+		},
+		{
+			q: "Who can use SkoutNet?",
+			a: "SkoutNet is for any one interested in any sports. Athletes can create profiles to showcase their talents, and scouts can use the platform to discover, evaluate, and communicate with athletes. Even fans, did your club sign a new winger and you can't find their compilations on youtube?Sign Up annd watch their profile highlights, attempts and analysis provided by others.",
+		},
+		{
+			q: "Is SkoutNet free to use?",
+			a: "Yes for the most part. Premium plans provide additional features like enhanced visibility, priority messaging, and advanced analytics for users.",
+		},
+	],
+};
 
 export default faq
