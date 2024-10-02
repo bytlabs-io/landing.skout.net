@@ -21,6 +21,7 @@ import siteConfig from "data/config";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { PageTransition } from "components/motion/page-transition";
 import { FallInPlace } from "components/motion/fall-in-place";
+import { useState } from "react";
 
 const providers = {
 	google: {
@@ -35,6 +36,28 @@ const providers = {
 };
 
 const Login: NextPage = () => {
+	const [firstname, setFirstname] = useState("");
+	const [lastname, setLastname] = useState("");
+	const [email, setEmail] = useState("");
+
+	const submitForm = () => {
+		// Perform form validation and submission logic here
+		const waitlisturl = "https://api.getwaitlist.com//api/v1/signup";
+		const waitlist_id = 20930;
+		const fetch_request = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				firstname,
+				lastname,
+				email,
+				waitlist_id,
+			}),
+		};
+		fetch(waitlisturl, fetch_request);
+	};
 	return (
 		<Section height="100vh" innerWidth="container.xl">
 			<BackgroundGradient
@@ -86,7 +109,7 @@ const Login: NextPage = () => {
 								name="signup"
 								title={siteConfig.signup.title}
 								onSubmit={(e) => {
-									console.log(e);
+									submitForm();
 								}}
 								// loginLink={<Link href="/login">Log in</Link>}
 							>
@@ -95,7 +118,27 @@ const Login: NextPage = () => {
 										Join the waiting list
 									</Heading>
 									<Br />
-									<Input type="email" placeholder="email"></Input>
+									<Input
+										type="text"
+										placeholder="First Name"
+										name="firstname"
+										value={firstname}
+										onChange={(e) => setFirstname(e.target.value)}
+									></Input>
+									<Input
+										type="text"
+										placeholder="Last Name"
+										name="lastname"
+										value={lastname}
+										onChange={(e) => setLastname(e.target.value)}
+									></Input>
+									<Input
+										type="email"
+										placeholder="email"
+										name="email"
+										value={email}
+										onChange={(e) => setEmail(e.target.value)}
+									></Input>
 									<ButtonGroup spacing={4} alignItems="center" marginY={2}>
 										<Button type="submit" colorScheme="primary">
 											Join
