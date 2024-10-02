@@ -29,6 +29,7 @@ const Login: NextPage = () => {
 	const [lastname, setLastname] = useState("");
 	const [email, setEmail] = useState("");
 	const [loading, setLoading] = useState(false);
+	const [submitted, setSubmitted] = useState(false);
 	const router = useRouter();
 
 	const submitForm = () => {
@@ -58,8 +59,17 @@ const Login: NextPage = () => {
 			setFirstname("");
 			setLastname("");
 			setEmail("");
-			router.push("/");
+			setSubmitted(true);
 		});
+	};
+
+	const goToSurvey = () => {
+		// open new page in new tab
+		window.open(
+			"https://8qz8xu6gow6.typeform.com/to/d6W1uECI",
+			"_blank",
+			"noopener noreferrer"
+		);
 	};
 	return (
 		<Section height="100vh" innerWidth="container.xl">
@@ -109,6 +119,21 @@ const Login: NextPage = () => {
 					<Center height="100%" flex="1">
 						{loading ? (
 							<LoadingSpinner />
+						) : submitted ? (
+							<Box width="container.sm" pt="8" px="8">
+								<Text>
+									Would you like to fill a quick survey on our product?
+								</Text>
+								<ButtonGroup spacing={4} alignItems="center" marginY={2}>
+									<Button
+										type="button"
+										colorScheme="primary"
+										onClick={goToSurvey}
+									>
+										yes
+									</Button>
+								</ButtonGroup>
+							</Box>
 						) : (
 							<Box width="container.sm" pt="8" px="8">
 								<Form
