@@ -50,7 +50,11 @@ const Login: NextPage = () => {
 		};
 		fetch(waitlisturl, fetch_request).then(() => {
 			setLoading(false);
-			toast("You have been successfully added to the waitlist!");
+			setTimeout(() => {
+				toast("You have been successfully added to the waitlist!", {
+					duration: 5000,
+				});
+			}, 5000);
 			setFirstname("");
 			setLastname("");
 			setEmail("");
