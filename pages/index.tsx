@@ -56,6 +56,8 @@ import { Testimonial, Testimonials } from "components/testimonials";
 import faq from "data/faq";
 import testimonials from "data/testimonials";
 import pricing from "data/pricing";
+import { Toaster } from "react-hot-toast";
+
 
 import {
 	Highlights,
@@ -81,6 +83,7 @@ const Home: NextPage = () => {
 
 				<FaqSection />
 			</Box>
+			<Toaster />
 		</Box>
 	);
 };
