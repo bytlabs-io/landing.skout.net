@@ -186,7 +186,7 @@ const Login: NextPage = () => {
 											value={phone}
 											name="phone"
 											required
-											onChange={(e) => setPhone(e)}
+											onChange={setPhone}
 										/>
 										<Br />
 										<ButtonGroup spacing={4} alignItems="center" marginY={2}>
