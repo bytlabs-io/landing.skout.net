@@ -20,12 +20,15 @@ import { Section } from "components/section";
 import siteConfig from "data/config";
 
 import PhoneInput from "react-phone-number-input";
-import { E164Number } from "libphonenumber-js/core";
 
 import { PageTransition } from "components/motion/page-transition";
 import { FallInPlace } from "components/motion/fall-in-place";
 import { useState } from "react";
 import toast from "react-hot-toast";
+
+type Tagged<A, T> = A & { __tag: T };
+
+export type E164Number = Tagged<string, "E164Number">;
 
 const Login: NextPage = () => {
 	const [firstname, setFirstname] = useState("");
@@ -186,7 +189,7 @@ const Login: NextPage = () => {
 											value={phone}
 											name="phone"
 											required
-											onChange={setPhone}
+											onChange={(e) => setPhone(e)}
 										/>
 										<Br />
 										<ButtonGroup spacing={4} alignItems="center" marginY={2}>
