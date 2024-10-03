@@ -1,5 +1,7 @@
 import { NextPage } from 'next'
 import NextLink from "next/link";
+import "react-phone-number-input/style.css";
+
 import {
 	Box,
 	Button,
