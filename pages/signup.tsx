@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
-import NextLink from 'next/link'
-import { useRouter } from "next/router";
+import NextLink from "next/link";
 import {
 	Box,
 	Button,
@@ -18,7 +17,7 @@ import { BackgroundGradient } from "components/gradients/background-gradient";
 import { Section } from "components/section";
 import siteConfig from "data/config";
 
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import PhoneInput from "react-phone-number-input";
 import { PageTransition } from "components/motion/page-transition";
 import { FallInPlace } from "components/motion/fall-in-place";
 import { useState } from "react";
@@ -30,7 +29,7 @@ const Login: NextPage = () => {
 	const [email, setEmail] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-	const router = useRouter();
+	const [phone, setPhone] = useState();
 
 	const submitForm = () => {
 		// Perform form validation and submission logic here
@@ -47,6 +46,7 @@ const Login: NextPage = () => {
 				lastname,
 				email,
 				waitlist_id,
+				phone,
 			}),
 		};
 		fetch(waitlisturl, fetch_request).then(() => {
@@ -173,8 +173,18 @@ const Login: NextPage = () => {
 											placeholder="email"
 											name="email"
 											value={email}
+											required
 											onChange={(e) => setEmail(e.target.value)}
 										></Input>
+										<Br />
+										<PhoneInput
+											placeholder="Enter phone number"
+											value={phone}
+											name="phone"
+											required
+											onChange={(e) => e ?? setPhone(e)}
+										/>
+										<Br />
 										<ButtonGroup spacing={4} alignItems="center" marginY={2}>
 											<Button type="submit" colorScheme="primary">
 												Join
