@@ -20,6 +20,8 @@ import { Section } from "components/section";
 import siteConfig from "data/config";
 
 import PhoneInput from "react-phone-number-input";
+import { E164Number } from "libphonenumber-js/core";
+
 import { PageTransition } from "components/motion/page-transition";
 import { FallInPlace } from "components/motion/fall-in-place";
 import { useState } from "react";
@@ -31,7 +33,7 @@ const Login: NextPage = () => {
 	const [email, setEmail] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-	const [phone, setPhone] = useState();
+	const [phone, setPhone] = useState<E164Number | undefined>();
 
 	const submitForm = () => {
 		// Perform form validation and submission logic here
@@ -184,7 +186,7 @@ const Login: NextPage = () => {
 											value={phone}
 											name="phone"
 											required
-											onChange={(e) => e ?? setPhone(e)}
+											onChange={(e) => setPhone(e)}
 										/>
 										<Br />
 										<ButtonGroup spacing={4} alignItems="center" marginY={2}>
