@@ -44,11 +44,11 @@ const Login: NextPage = () => {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				firstname,
-				lastname,
+				first_name: firstname,
+				last_name: lastname,
 				email,
 				waitlist_id,
-				phone,
+				phone: phone,
 			}),
 		};
 		fetch(waitlisturl, fetch_request).then(() => {
