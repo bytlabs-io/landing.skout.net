@@ -160,7 +160,7 @@ const Login: NextPage = () => {
 								>
 									<FallInPlace delay={0.8}>
 										<Heading as="h2" size="lg">
-											Join the waiting list
+											Join the Waitlist
 										</Heading>
 										<Br />
 										<Input
