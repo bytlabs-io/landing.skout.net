@@ -17,7 +17,7 @@ const faq = {
 		},
 		{
 			q: "Who can use SkoutNet?",
-			a: "SkoutNet is for any one interested in any sports. Athletes can create profiles to showcase their talents, and scouts can use the platform to discover, evaluate, and communicate with athletes. Even fans, did your club sign a new winger and you can't find their compilations on youtube?Sign Up annd watch their profile highlights, attempts and analysis provided by others.",
+			a: "SkoutNet is for any one interested in any sports. Athletes can create profiles to showcase their talents, and scouts can use the platform to discover, evaluate, and communicate with athletes. Even fans, did your club sign a new winger and you can't find their compilations on youtube? Download SkoutNet and watch their profile highlights, attempts and analysis provided by others.",
 		},
 		{
 			q: "Is SkoutNet free to use?",
