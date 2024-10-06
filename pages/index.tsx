@@ -114,10 +114,10 @@ const HeroSection: React.FC = () => {
 					>
 						<FallInPlace delay={0.8}>
 							<ButtonGroup spacing={4} alignItems="center">
-								<ButtonLink colorScheme="primary" size="lg" href="/signup">
-									Sign Up
+								<ButtonLink colorScheme="primary" size="lg" href="/waitlist">
+									Join Waitlist
 								</ButtonLink>
-								<ButtonLink
+								{/* <ButtonLink
 									size="lg"
 									href="#"
 									variant="outline"
@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
 									}
 								>
 									View demo
-								</ButtonLink>
+								</ButtonLink> */}
 							</ButtonGroup>
 						</FallInPlace>
 					</Hero>

@@ -21,20 +21,20 @@ const providers = {
 
 const Login: NextPage = () => {
   return (
-    <Section height="calc(100vh - 200px)" innerWidth="container.sm">
-      <BackgroundGradient zIndex="-1" />
+		<Section height="calc(100vh - 200px)" innerWidth="container.sm">
+			<BackgroundGradient zIndex="-1" />
 
-      <Center height="100%" pt="20">
-        <PageTransition width="100%">
-          <Auth
-            view="login"
-            providers={providers}
-            signupLink={<Link href="/signup">Sign up</Link>}
-          />
-        </PageTransition>
-      </Center>
-    </Section>
-  )
+			<Center height="100%" pt="20">
+				<PageTransition width="100%">
+					<Auth
+						view="login"
+						providers={providers}
+						signupLink={<Link href="/waitlist">Sign up</Link>}
+					/>
+				</PageTransition>
+			</Center>
+		</Section>
+	);
 }
 
 export default Login

@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import { NextPage } from "next";
 import NextLink from "next/link";
 import "react-phone-number-input/style.css";
 
@@ -113,7 +113,7 @@ const Login: NextPage = () => {
 							py="0"
 							ps="0"
 							maxW={{ base: "100%", xl: "80%" }}
-							features={siteConfig.signup.features.map((feature) => ({
+							features={siteConfig.waitlist.features.map((feature) => ({
 								iconPosition: "left",
 								variant: "left-icon",
 
@@ -137,15 +137,22 @@ const Login: NextPage = () => {
 										colorScheme="primary"
 										onClick={goToSurvey}
 									>
-										yes
+										Yes
 									</Button>
+									{/* <Button
+										type="button"
+										colorScheme="primary"
+										onClick={goToSurvey}
+									>
+										Go Back
+									</Button> */}
 								</ButtonGroup>
 							</Box>
 						) : (
 							<Box width="container.sm" pt="8" px="8">
 								<Form
-									name="signup"
-									title={siteConfig.signup.title}
+									name="waitlist"
+									title={siteConfig.waitlist.title}
 									onSubmit={(e) => {
 										submitForm();
 									}}
@@ -219,17 +226,17 @@ const Login: NextPage = () => {
 	);
 };
 
-export default Login
+export default Login;
 
 export const getStaticProps = () => {
-  return {
-    props: {
-      header: {
-        display: 'none',
-      },
-      footer: {
-        borderTopWidth: '1px',
-      },
-    },
-  }
-}
+	return {
+		props: {
+			header: {
+				display: "none",
+			},
+			footer: {
+				borderTopWidth: "1px",
+			},
+		},
+	};
+};

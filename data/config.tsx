@@ -29,8 +29,8 @@ const siteConfig = {
 			// 	href: "/login",
 			// },
 			{
-				label: "Sign Up",
-				href: "/signup",
+				label: "Join Waitlist",
+				href: "/waitlist",
 				variant: "primary",
 			},
 		],
@@ -60,7 +60,7 @@ const siteConfig = {
 			},
 		],
 	},
-	signup: {
+	waitlist: {
 		title: "Join the Waiting List",
 		features: [
 			{
